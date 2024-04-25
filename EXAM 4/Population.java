@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.StringTokenizer;
 
-class Populations {
+class Population {
 
     public static void main(String[] args) {
 
@@ -12,7 +12,7 @@ class Populations {
         String fileName = sc.nextLine();
         ArrayList<Critter> critters = new ArrayList<>();
         try {
-            File file = new File(fileName);
+            File file = new File(  fileName);
             Scanner fileReader = new Scanner(file);
             int critterNum = fileReader.nextInt();
             fileReader.nextLine();
@@ -25,11 +25,11 @@ class Populations {
                 StringTokenizer st = new StringTokenizer(fileReader.nextLine());
                 String firstMate = st.nextToken();
                 String secondMate = st.nextToken();
-                Critter fristParent = critters.get(Integer.parseInt(firstMate)-1);
-                Critter secondParent = critters.get(Integer.parseInt(secondMate)-1);
+                Critter fristParent = critters.get(Integer.parseInt(firstMate) - 1);
+                Critter secondParent = critters.get(Integer.parseInt(secondMate) - 1);
                 critters.add(new Critter(fristParent.mateWith(secondParent)));
             }
-            for(Critter c : critters){
+            for (Critter c : critters) {
                 System.out.println(c.toString());
             }
 

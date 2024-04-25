@@ -13,7 +13,7 @@ public class Critter {
         int increment = 0;
         if (parent.length == otherParent.length) {
 
-            while (count != 10) {
+            while (count != 10 && increment <= parent.length - 1) {
                 childCode = childCode + parent[increment] + otherParent[increment];
                 count += 2;
                 ++increment;
@@ -23,7 +23,7 @@ public class Critter {
 
                 if (increment > parent.length - 1) {
 
-                    while (count != 10) {
+                    while (count != 10 && increment <= otherParent.length - 1) {
                         childCode = childCode + otherParent[increment];
                         ++count;
                         ++increment;
@@ -40,7 +40,7 @@ public class Critter {
 
                 if (increment > otherParent.length - 1) {
 
-                    while (count != 10) {
+                    while (count != 10 && increment <= parent.length - 1) {
                         childCode = childCode + parent[increment];
                         ++count;
                         ++increment;
